@@ -125,7 +125,7 @@ export class Menu extends LitElement{
             <header class="cabecalho">
                 <div id="fade" aparecer></div>
                 <nav class="cabecalho__menu">
-                    <minha-imagem class="logo" url="../../imagem/logo.webp"  @click="${() => this.irParaLink('/#home')}"></minha-imagem>
+                    <minha-imagem class="logo" url="../../imagem/logo.webp"  @click="${() => this.irParaLink()}"></minha-imagem>
                     <ul class="menu__lista" >
                         <minha-lista class="lista__item__desktop" link="/#home" texto="Home"></minha-lista>
                         <minha-lista class="lista__item__desktop" link="/#guia" texto="Guia do Jogo"></minha-lista>
@@ -154,7 +154,7 @@ export class Menu extends LitElement{
         `;
     }
 
-    irParaLink(link){
+    irParaLink(){
         const a = document.createElement('a');
         a.href = '/#home';
         
