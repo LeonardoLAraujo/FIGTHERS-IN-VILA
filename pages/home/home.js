@@ -6,6 +6,7 @@ import { Faq } from '../../componentes/faq/faq.js';
 import { Paragrafo } from '../../componentes/paragrafo/paragrafo.js';
 import { ListaUl } from '../../componentes/lista-ul/lista-ul.js';
 import { Loading } from '../../componentes/loading/loading.js';
+import { MyPage } from '../../componentes/myPage/myElement.js';
 
 export class Home extends LitElement{
 
@@ -70,7 +71,9 @@ export class Home extends LitElement{
     render(){
         return html `
         ${scroll(0,0)}
-        
+
+        <my-element></my-element>
+
         <header class="cabecalho">
             <meu-titulo class="titulo-principal" texto="FIGTHERS IN VILA"></meu-titulo>
         </header>
