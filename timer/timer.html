@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,800&display=swap" rel="stylesheet">
+    <script src="./my-timer.js" type="module"></script>
+
+    <style>
+        body{
+            height: 40rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 36px;
+            background-color: #a9a9a9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        body img{
+            width: 100vw;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/ba/fe/7a/bafe7add5c6f62d293a1cbc1a5e4408e.gif" alt="">
+    <my-timer duration="600"></my-timer>
+</body>
+</html>
