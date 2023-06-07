@@ -1,6 +1,6 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 import { materialSymbolsCSS } from './materialSymbols.js';
-import { ListaLi } from '../lista-li/lista-li.js';
+import { ListaLi } from './../lista-li/lista-li.js';
 
 export class Icone extends LitElement{
 
