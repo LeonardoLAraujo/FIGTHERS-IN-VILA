@@ -2,6 +2,7 @@ import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-el
 import { Titulo } from '../../componentes/titulo/titulo.js';
 import { Botao } from '../../componentes/botao/botao.js';
 import { Icone } from '../../componentes/icone/icone.js';
+import { Loading } from '../../componentes/loading/loading.js';
 
 export class Download extends LitElement{
     constructor(){
@@ -79,6 +80,10 @@ export class Download extends LitElement{
 
     render(){
         return html `
+
+            ${scroll(0,0)}
+            <meu-loading class="carregar-guia" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>
+
             <header id="cabecalho">
                 <div class="titulo-botao">
                     <meu-titulo class="aumentar-fonte" texto="Download"></meu-titulo>

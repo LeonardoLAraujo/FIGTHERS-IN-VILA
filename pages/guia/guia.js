@@ -2,6 +2,7 @@ import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-el
 import { Titulo } from '../../componentes/titulo/titulo.js';
 import { Paragrafo } from '../../componentes/paragrafo/paragrafo.js';
 import { Iframe } from '../../componentes/iframe/iframe..js';
+import { Loading } from '../../componentes/loading/loading.js';
 
 export class Guia extends LitElement{
     constructor(){
@@ -38,6 +39,9 @@ export class Guia extends LitElement{
 
     render(){
         return html `
+            ${scroll(0,0)}
+            <meu-loading class="carregar-guia" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>
+            
             <header>
                 <meu-titulo class="centralizar" texto="Guia do Jogo"></meu-titulo>
                 <meu-paragrafo class="p-guia" texto="O jogo é de luta, onde você escolhe entre o kiko e o chaves, tem vários tipo de luta, com poder, com objetos como sapatos por exemplo, mais em baixo, mostraremos uma lista para você"></meu-paragrafo>

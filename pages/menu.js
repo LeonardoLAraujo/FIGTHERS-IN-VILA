@@ -125,7 +125,7 @@ export class Menu extends LitElement{
             <header class="cabecalho">
                 <div id="fade" aparecer></div>
                 <nav class="cabecalho__menu">
-                    <minha-imagem class="logo" url="../../imagem/logo.webp"></minha-imagem>
+                    <minha-imagem class="logo" url="../../imagem/logo.webp"  @click="${() => this.irParaLink()}"></minha-imagem>
                     <ul class="menu__lista" >
                         <minha-lista class="lista__item__desktop" link="/#home" texto="Home"></minha-lista>
                         <minha-lista class="lista__item__desktop" link="/#guia" texto="Guia do Jogo"></minha-lista>
@@ -154,6 +154,14 @@ export class Menu extends LitElement{
         `;
     }
 
+    irParaLink(){
+        const a = document.createElement('a');
+        a.href = '/#home';
+        
+        window.location.replace(a.href);
+
+    }
+
     abrirMenu(){
         this.menuMobile.removeAttribute('aparecer');
         this.fade.removeAttribute("aparecer");
@@ -168,6 +176,8 @@ export class Menu extends LitElement{
         this.corpo.style.overflow = 'auto';
         this.botao__fechar__menu.setAttribute("aparecer", "aparecer");
         this.botao__abrir__menu.removeAttribute("aparecer");
+
+        scroll(0,0);
     }
 }
 

@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 import { Titulo } from '../../componentes/titulo/titulo.js';
+import { Loading } from '../../componentes/loading/loading.js';
 
 export class Contato extends LitElement{
     constructor(){
@@ -20,6 +21,8 @@ export class Contato extends LitElement{
 
     render(){
         return html `
+            ${scroll(0,0)}
+            <meu-loading class="carregar-contato" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>
             <meu-titulo class="centralizar aumentar-fonte" texto="Contato"></meu-titulo>
 
             <section>
@@ -34,17 +37,13 @@ export class Contato extends LitElement{
                 <div>
                     <minha-imagem class="img-contato" titulo="gmail" url="https://cdn-icons-png.flaticon.com/512/281/281769.png" @click="${() => this.irParaLink('https://lit.dev/docs/')}"></minha-imagem>
                     <meu-titulo class="centralizar" texto="Gmail"></meu-titulo>
-                </div>
-                
-                
-                
+                </div>            
             </section>
 
         `;
     }
 
     irParaLink(link){
-        console.log("yfe");
         window.open(link , "_blank");
     }
 }

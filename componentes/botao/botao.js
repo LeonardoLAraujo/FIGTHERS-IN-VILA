@@ -38,7 +38,7 @@ export class Botao extends LitElement{
             }
             
             .botao:hover{
-                color: #398336
+                background-color: #e5c97e;
             }
         `;
     }

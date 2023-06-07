@@ -18,6 +18,7 @@ export class Imagem extends LitElement{
         return css`
             .logo{
                 width: 70px;
+                cursor: pointer;
             }
 
             .rodape-logo{
@@ -72,6 +73,10 @@ export class Imagem extends LitElement{
                 .imagem-sobre2{
                     display: none;
                 }
+            }
+
+            .loading{
+                width: 8rem;
             }
         `;
     }

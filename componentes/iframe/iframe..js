@@ -14,7 +14,17 @@ export class Iframe extends LitElement{
     }
 
     static styles = css`
+        iframe{
+          border-radius: 10px;
+        }
 
+        @media (max-width: 600px){
+            iframe{
+                width: 100%;
+                height: 60%;
+            }
+            
+        }
     `;
 
     render(){

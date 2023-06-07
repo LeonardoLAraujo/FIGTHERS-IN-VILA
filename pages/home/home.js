@@ -4,10 +4,20 @@ import { Imagem } from '../../componentes/imagem/imagem.js';
 import { Botao } from '../../componentes/botao/botao.js';
 import { Faq } from '../../componentes/faq/faq.js';
 import { Paragrafo } from '../../componentes/paragrafo/paragrafo.js';
+import { ListaUl } from '../../componentes/lista-ul/lista-ul.js';
+import { Loading } from '../../componentes/loading/loading.js';
 
 export class Home extends LitElement{
+
+    static get properties(){
+        return{
+            aparecer: {type: Boolean},
+        }
+    }
+
     constructor(){
         super();
+        this.aparecer = true;
     }
 
     static get styles(){
@@ -59,10 +69,13 @@ export class Home extends LitElement{
 
     render(){
         return html `
-
+        ${scroll(0,0)}
+        
         <header class="cabecalho">
             <meu-titulo class="titulo-principal" texto="FIGTHERS IN VILA"></meu-titulo>
         </header>
+
+        <meu-loading class="carregar-home" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>
 
         <section class="conteudo">
             <div class="guiaDoJogo">
@@ -93,6 +106,8 @@ export class Home extends LitElement{
             </div>
            
         </section>
+
+        <lista-ul ${this.aparecer = true}></lista-ul>
             
         `;
     }

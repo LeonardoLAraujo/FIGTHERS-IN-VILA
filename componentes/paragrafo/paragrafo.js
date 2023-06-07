@@ -26,6 +26,16 @@ export class Paragrafo extends LitElement{
             font-size: 22px;
             color: #fff;
        }
+
+       .load{
+        color: #fff;
+        font-size: 22px;
+       }
+
+       .sobreNos{
+            font-size: 21px;
+            text-align: justify;
+       }
     `;
 
     render(){
