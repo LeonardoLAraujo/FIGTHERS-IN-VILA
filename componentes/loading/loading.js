@@ -78,7 +78,7 @@ export class Loading extends LitElement{
         setTimeout(() => {
             this.load.removeAttribute("carregando");
             this.corpo.style.overflow = 'auto';
-        }, 1000);
+        }, 800);
 
     }
 }

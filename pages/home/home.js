@@ -105,10 +105,7 @@ export class Home extends LitElement{
                 <meu-faq titulo="Tem para todas as plataformas?" conteudo="No momento não, o desenvolvimento do jogo foi pensado em primeiro momento para desktop"></meu-faq>
             </div>
            
-        </section>
-
-        <lista-ul ${this.aparecer = true}></lista-ul>
-            
+        </section>            
         `;
     }
 }

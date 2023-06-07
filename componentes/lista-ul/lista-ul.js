@@ -5,11 +5,13 @@ export class ListaUl extends LitElement{
     static get properties(){
         return{
             class: {type: String},
+            aparecer: {type: String},
         }
     }
 
     constructor(){
         super();       
+        this.texto = 'teszte';
     }
 
     static get styles(){
@@ -57,22 +59,30 @@ export class ListaUl extends LitElement{
                 }
             }
 
-            h1{
-                color: #fff;
+            ul[aparecer]{
+                display: none;
             }
+
         `;
     }
 
     firstUpdated(){
-        this.meuUl = document.querySelector("ul");
+        this.meuUl = this.shadowRoot?.querySelector("ul");
 
-       
+        this.aparecer = "false";
+
+        if(this.aparecer === "false"){
+            this.meuUl.removeAttribute("aparecer");
+        }else if(this.aparecer === "true"){
+            this.meuUl.setAttribute("aparecer", "aparecer");
+            console.log("aparecer");
+        }
     }
 
     render(){
         return html`
-            <ul class=${this.class}>
-                <slot></slot>
+            <ul class=${this.class} aparecer=${this.aparecer}>
+                <meu-titulo texto="KnnoiNION"></meu-titulo>
             </ul>
         `;
     }
