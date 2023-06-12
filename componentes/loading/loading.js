@@ -33,10 +33,6 @@ export class Loading extends LitElement{
                 display: none
             }
 
-            .carregar-home{
-                margin-top: -66rem;
-            }
-
             .carregar-guia{
                 margin-top: -5.7rem;
             }

@@ -72,13 +72,13 @@ export class Home extends LitElement{
         return html `
         ${scroll(0,0)}
 
-        <my-element></my-element>
+        <meu-loading class="carregar-home" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>
 
         <header class="cabecalho">
             <meu-titulo class="titulo-principal" texto="FIGTHERS IN VILA"></meu-titulo>
         </header>
 
-        <meu-loading class="carregar-home" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>
+        
 
         <section class="conteudo">
             <div class="guiaDoJogo">

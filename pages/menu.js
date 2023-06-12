@@ -73,7 +73,7 @@ export class Menu extends LitElement{
             display: flex;
             flex-direction: row;
             list-style: none;   
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             padding: 0.5rem;
             background-color: #161616;

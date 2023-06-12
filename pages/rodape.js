@@ -15,7 +15,7 @@ export class Rodape extends LitElement{
             justify-content: center;
             text-align: center;
             background-color: #161616;
-            height: 38vh;
+            height: 100%;
             align-items: center;
             
         }
