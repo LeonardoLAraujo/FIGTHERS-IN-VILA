@@ -1,7 +1,15 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Iframe extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static properties = {
         altura: {type: String},
         largura: {type: String},
@@ -9,10 +17,18 @@ export class Iframe extends LitElement{
         url: {type: String},
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static styles = css`
         iframe{
           border-radius: 10px;
@@ -26,7 +42,11 @@ export class Iframe extends LitElement{
             
         }
     `;
-
+    
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html`
             <iframe width=${this.largura} height=${this.altura} src=${this.url} title=${this.titulo} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

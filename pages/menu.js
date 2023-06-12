@@ -3,8 +3,16 @@ import { ListaLi } from '../componentes/lista-li/lista-li.js';
 import { Imagem } from '../componentes/imagem/imagem.js';
 import { Icone } from '../../componentes/icone/icone.js';
 
+/***
+ * @class
+ */
 export class Menu extends LitElement{
 
+    /**
+     * @method
+     * @static
+     * @overload
+     */
     static get properties(){
         return{
             aparecer: {type: Boolean, reflect: true},
@@ -12,6 +20,9 @@ export class Menu extends LitElement{
         }
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
         this.icone = new Icone();
@@ -19,6 +30,11 @@ export class Menu extends LitElement{
         this.corpo = document.querySelector("body");
     }
 
+    /**
+     * @method
+     * @static
+     * @overload
+     */
     static styles = css `
         .cabecalho{
             width: 100%;
@@ -113,6 +129,9 @@ export class Menu extends LitElement{
         }
     `;
 
+    /**
+     * @method
+     */
     firstUpdated(){
         this.menuMobile = this.shadowRoot?.querySelector(".menu__lista-mobile");
         this.fade = this.shadowRoot?.querySelector("#fade");
@@ -120,6 +139,10 @@ export class Menu extends LitElement{
         this.botao__fechar__menu = this.shadowRoot?.querySelector(".botao-fechar-menu");
     }
 
+    /**
+     * @method
+     * @overload
+     */
     render(){
         return html`
             <header class="cabecalho">
@@ -154,6 +177,9 @@ export class Menu extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     */
     irParaLink(){
         const a = document.createElement('a');
         a.href = '/#home';
@@ -162,6 +188,9 @@ export class Menu extends LitElement{
 
     }
 
+    /***
+     * @method
+     */
     abrirMenu(){
         this.menuMobile.removeAttribute('aparecer');
         this.fade.removeAttribute("aparecer");
@@ -170,6 +199,9 @@ export class Menu extends LitElement{
         this.botao__fechar__menu.removeAttribute("aparecer");
     }
 
+    /***
+     * @method
+     */
     fecharMenu(){
         this.menuMobile.setAttribute('aparecer', 'aparecer');
         this.fade.setAttribute("aparecer", 'aparecer');

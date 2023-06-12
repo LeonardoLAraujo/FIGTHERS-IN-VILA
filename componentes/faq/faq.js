@@ -1,17 +1,33 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Faq extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static properties = {
         titulo: {type: String},
         conteudo: {type: String},
         class: {type: String},
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static styles = css `
         .faq-container{
             width: 90%;
@@ -33,10 +49,12 @@ export class Faq extends LitElement{
         details[open] summary{
             border-bottom: 1px solid #fff;
         }
-
-   
     `;
-
+    
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html `
         <div class="faq-container">

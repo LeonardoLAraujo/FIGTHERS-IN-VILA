@@ -2,11 +2,22 @@ import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-el
 import { Titulo } from '../../componentes/titulo/titulo.js';
 import { Loading } from '../../componentes/loading/loading.js';
 
+/***
+ * @class
+ */
 export class Contato extends LitElement{
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @method
+     * @overload
+     * @static
+     */
     static get styles(){
         return css`
             section{
@@ -19,6 +30,10 @@ export class Contato extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     * @overload
+     */
     render(){
         return html `
             ${scroll(0,0)}
@@ -43,6 +58,9 @@ export class Contato extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     */
     irParaLink(link){
         window.open(link , "_blank");
     }

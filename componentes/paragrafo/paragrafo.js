@@ -1,16 +1,32 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Paragrafo extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static properties = {
         texto: {type: String},
         class: {type: String},
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static styles = css`
         .corBranca-25{
             color: #fff;
@@ -37,8 +53,12 @@ export class Paragrafo extends LitElement{
             text-align: justify;
        }
     `;
-
-    render(){
+    
+    /***
+     * @method
+     * @overload
+     */
+    render(){   
         return html`
             <p class=${this.class} texto=>${this.texto}</p>
         `;

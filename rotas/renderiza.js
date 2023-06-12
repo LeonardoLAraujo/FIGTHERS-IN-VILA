@@ -1,3 +1,7 @@
+/**
+* @object
+* @static
+*/
 const hasgDaUrl = {
     guia: '#guia',
     download: '#download',
@@ -5,13 +9,22 @@ const hasgDaUrl = {
     sobreNos: '#sobreNos',
 }
 
+/***
+ * @class
+ */
 export class Renderiza{
     
+    /***
+     * @constructor
+     */
     constructor(){
        this.main = document.querySelector("#principal");
        this.rodape = document.querySelector("#rodape");
     }
 
+    /**
+     * @method
+     */
     renderizarRota(){
         switch(window.location.hash){
             case hasgDaUrl['guia']:

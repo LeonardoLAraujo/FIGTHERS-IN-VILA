@@ -4,11 +4,22 @@ import { Botao } from '../../componentes/botao/botao.js';
 import { Icone } from '../../componentes/icone/icone.js';
 import { Loading } from '../../componentes/loading/loading.js';
 
+/***
+ * @class
+ */
 export class Download extends LitElement{
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @method
+     * @overload
+     * @static
+     */
     static get styles(){
         return css `
             #cabecalho{
@@ -78,6 +89,10 @@ export class Download extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     * @overload
+     */
     render(){
         return html `
 

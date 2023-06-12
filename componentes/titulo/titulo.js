@@ -1,7 +1,14 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Titulo extends LitElement{
-
+    /***
+     * @method
+     * @static
+     * @overload
+     */
     static get properties(){
         return{
             texto: {type: String},
@@ -9,10 +16,18 @@ export class Titulo extends LitElement{
         }
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @method
+     * @static
+     * @overload
+     */
     static get styles(){
         return css`
             h1{
@@ -50,6 +65,10 @@ export class Titulo extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     * @overload
+     */
     render(){
         return html `
             <h1 class=${this.class} texto=>${this.texto}</h1>

@@ -1,7 +1,15 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Imagem extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get properties(){
         return{
             url: {type: String},
@@ -9,11 +17,19 @@ export class Imagem extends LitElement{
             class: {type: String},
         }
     }
-
+    
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get styles(){
         return css`
             .logo{
@@ -81,6 +97,10 @@ export class Imagem extends LitElement{
         `;
     }
 
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html `
             <img class=${this.class} src=${this.url} title=${this.titulo}>

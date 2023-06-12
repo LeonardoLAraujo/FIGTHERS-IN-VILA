@@ -1,11 +1,22 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Link extends LitElement{
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get properties(){
         return{
             texto: {type: String},
@@ -14,6 +25,11 @@ export class Link extends LitElement{
         }
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get styles(){
         return css `
             .meu-link{
@@ -32,6 +48,10 @@ export class Link extends LitElement{
         `;
     }
 
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html`
             <a class="meu-link ${this.class}" href=${this.link} texto=>${this.texto}</a>

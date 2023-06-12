@@ -8,18 +8,33 @@ import { Contato } from './pages/contato/contato.js';
 import { Download } from './pages/download/download.js';
 import { Rodape } from './pages/rodape.js';
 
+/***
+ * @class
+ */
 class MyApp extends LitElement{
 
+    /***
+     * @constructor
+     */
     constructor(){
        super();
        this.localDaRotaAtual = new Rota();
     }
 
+    /***
+     * @static
+     * @method
+     * @overload
+     */
     static get styles(){
         return css`
         `;
     }
 
+    /***
+     * @method
+     * @overload
+     */
     render(){
         return html `
             <meu-menu id="corpoPrincipal"></meu-menu>

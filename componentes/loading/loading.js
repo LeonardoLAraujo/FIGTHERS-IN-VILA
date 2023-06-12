@@ -1,8 +1,16 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 import { Paragrafo } from '../paragrafo/paragrafo.js';
 
+/***
+ * @class
+ */
 export class Loading extends LitElement{
 
+    /**
+     * @method
+     * @static
+     * @overload
+     */
     static get properties(){
         return{
             class: {type: String},
@@ -11,11 +19,19 @@ export class Loading extends LitElement{
         }
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
         this.corpo = document.querySelector("body");
     }
-
+    
+     /**
+     * @method
+     * @static
+     * @overload
+     */
     static get styles(){
         return css`
             .carregar{
@@ -55,11 +71,18 @@ export class Loading extends LitElement{
         `;  
     }
 
+    /***
+     * @method
+     */
     firstUpdated(){
         this.load = this.shadowRoot?.querySelector(".carregar");                                         
     }
 
-    render(){
+    /***
+     * @overload
+     * @method
+     */
+    render(){   
         return html`
             <div class="carregar ${this.class}" ${this.carregar()} imagem=${this.imagem} textoLoad=${this.textoLoad}> 
                 <minha-imagem class="loading" url=${this.imagem}></minha-imagem>
@@ -68,6 +91,9 @@ export class Loading extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     */
     carregar(){
 
         setTimeout(() => {

@@ -4,11 +4,22 @@ import { Paragrafo } from '../../componentes/paragrafo/paragrafo.js';
 import { Iframe } from '../../componentes/iframe/iframe..js';
 import { Loading } from '../../componentes/loading/loading.js';
 
+/***
+ * @class
+ */
 export class Guia extends LitElement{
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @method
+     * @overload
+     * @static
+     */
     static styles = css`
         .lutaComSapato{
             height: 50vh;
@@ -36,8 +47,12 @@ export class Guia extends LitElement{
             padding: 1rem;
         }
     `;
-
-    render(){
+    
+    /***
+     * @method
+     * @overload
+     */
+    render(){   
         return html `
             ${scroll(0,0)}
             <meu-loading class="carregar-guia" textoLoad="Carregando" imagem="../../imagem/gif-chaves.gif"></meu-loading>

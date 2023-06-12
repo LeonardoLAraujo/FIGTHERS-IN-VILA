@@ -8,19 +8,35 @@ import { ListaUl } from '../../componentes/lista-ul/lista-ul.js';
 import { Loading } from '../../componentes/loading/loading.js';
 import { MyPage } from '../../componentes/myPage/myElement.js';
 
+/***
+ * @class
+ */
 export class Home extends LitElement{
 
+     /**
+     * @method
+     * @static
+     * @overload
+     */
     static get properties(){
         return{
             aparecer: {type: Boolean},
         }
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
         this.aparecer = true;
     }
 
+     /**
+     * @method
+     * @static
+     * @overload
+     */
     static get styles(){
         return css`
             .cabecalho{
@@ -67,6 +83,10 @@ export class Home extends LitElement{
         `;
     }
 
+     /**
+     * @method
+     * @overload
+     */
     render(){
         return html `
         ${scroll(0,0)}
@@ -76,8 +96,6 @@ export class Home extends LitElement{
         <header class="cabecalho">
             <meu-titulo class="titulo-principal" texto="FIGTHERS IN VILA"></meu-titulo>
         </header>
-
-        
 
         <section class="conteudo">
             <div class="guiaDoJogo">

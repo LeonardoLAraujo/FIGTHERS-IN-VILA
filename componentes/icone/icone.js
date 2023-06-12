@@ -2,8 +2,16 @@ import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-el
 import { materialSymbolsCSS } from './materialSymbols.js';
 import { ListaLi } from './../lista-li/lista-li.js';
 
+/***
+ * @class
+ */
 export class Icone extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get properties(){
         return{
             nomeIcone: {type: String},
@@ -11,6 +19,11 @@ export class Icone extends LitElement{
         }
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static styles = [
         materialSymbolsCSS, 
         css `
@@ -24,15 +37,20 @@ export class Icone extends LitElement{
                 }
             }
     `];
-
+    
+    /***
+     * @constructor
+     */
     constructor(){
         super();
         this.lista = new ListaLi();
         
     }
 
-    
-
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html`
             <span class="meu-icone material-symbols-outlined">${this.nomeIcone}</span>

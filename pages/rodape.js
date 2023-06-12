@@ -2,18 +2,34 @@ import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-el
 import { ListaLi } from '../componentes/lista-li/lista-li.js';
 import { Imagem } from '../componentes/imagem/imagem.js';
 
+/***
+ * @class
+ */
 export class Rodape extends LitElement{
     
+    /**
+     * @method
+     * @static
+     * @overload
+     */
     static get properties(){
         return{
             class: {type: String},
         }
     }
 
+    /***
+     * @method
+     */
     constructor(){
         super();
     }
 
+    /**
+     * @method
+     * @static
+     * @overload
+     */
     static styles = css `
         article{
             display: flex;
@@ -41,6 +57,10 @@ export class Rodape extends LitElement{
         }
     `;
 
+    /**
+     * @method
+     * @overload
+     */
     render(){
         return html`
             <article class=${this.class}>

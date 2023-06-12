@@ -1,7 +1,15 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class MyPage extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get properties(){
         return{
             active: {type: Boolean, reflect: true},
@@ -16,11 +24,19 @@ export class MyPage extends LitElement{
         };
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
         this.value = 1;
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get styles(){
         return css`
             :host{
@@ -33,6 +49,10 @@ export class MyPage extends LitElement{
         `;
     }
 
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html`
             <span>Active: ${this.active}</span>
@@ -43,6 +63,9 @@ export class MyPage extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     */
     getNewVal(){
         this.value = Math.floor(Math.random() * 100);
     }

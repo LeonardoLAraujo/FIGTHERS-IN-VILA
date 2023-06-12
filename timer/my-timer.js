@@ -1,14 +1,27 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 import { play, pause, replay } from './icons.js';
 
+/***
+ * @class
+ */
 export class MyTimer extends LitElement{
 
+    /***
+     * @method
+     * @overload
+     * @static
+     */
     static properties = {
         duration: {},
         end: {state: true},
         remaining: {state: true},
     }
 
+    /***
+     * @method
+     * @static
+     * @overload
+     */
     static get styles(){
         return css`
             :host{
@@ -31,8 +44,11 @@ export class MyTimer extends LitElement{
 
             }
         `;
-    }
+    }   
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
         this.duration = 60;
@@ -40,6 +56,10 @@ export class MyTimer extends LitElement{
         this.remaining = 0;
     }
 
+    /***
+     * @method
+     * @overload
+     */
     render(){
         const {remaining, running} = this;
         const min = Math.floor(remaining / 60000);
@@ -63,21 +83,33 @@ export class MyTimer extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     */
     start(){
         this.end = Date.now() + this.remaining;
         this.tick();
     }
 
+    /***
+     * @method
+     */
     pause(){
         this.end = null;
     }
 
+    /***
+     * @method
+     */
     reset(){
         const running = this.running;
         this.remaining = this.duration * 1000;
         this.end = running ? Date.now() + this.remaining : null;
     }
 
+    /***
+     * @method
+     */
     tick(){
         if(this.running){
             this.remaining = Math.max(0, this.end - Date.now());
@@ -85,10 +117,16 @@ export class MyTimer extends LitElement{
         }
     }
 
+    /***
+     * @method
+     */
     get running(){
         return this.end && this.remaining;
     }
 
+    /***
+     * @callback
+     */
     connectedCallback(){
         super.connectedCallback();
         this.reset();
@@ -97,6 +135,9 @@ export class MyTimer extends LitElement{
 
 customElements.define('my-timer', MyTimer);
 
+/***
+ * @method
+ */
 function pad(pad, val){
     return pad ? String(val).padStart(2, '0') : val;
 }

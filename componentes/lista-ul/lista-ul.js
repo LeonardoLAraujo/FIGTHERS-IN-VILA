@@ -1,7 +1,15 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class ListaUl extends LitElement{
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get properties(){
         return{
             class: {type: String},
@@ -9,11 +17,19 @@ export class ListaUl extends LitElement{
         }
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();       
         this.texto = 'teszte';
     }
 
+    /***
+     * @static
+     * @overload
+     * @method
+     */
     static get styles(){
         return css`
             .menu__lista{
@@ -66,6 +82,9 @@ export class ListaUl extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     */
     firstUpdated(){
         this.meuUl = this.shadowRoot?.querySelector("ul");
 
@@ -79,6 +98,10 @@ export class ListaUl extends LitElement{
         }
     }
 
+    /***
+     * @overload
+     * @method
+     */
     render(){
         return html`
             <ul class=${this.class} aparecer=${this.aparecer}>

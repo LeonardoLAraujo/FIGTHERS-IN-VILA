@@ -5,11 +5,24 @@ import { Icone } from '../../componentes/icone/icone.js';
 import { Loading } from '../../componentes/loading/loading.js';
 import { Paragrafo } from '../../componentes/paragrafo/paragrafo.js';
 
+
+/***
+ * @class
+ */
 export class SobreNos extends LitElement{
+
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /**
+     * @method
+     * @static
+     * @overload
+     */
     static get styles(){
         return css`
             .sobre{
@@ -23,6 +36,10 @@ export class SobreNos extends LitElement{
         `;  
     }
 
+    /**
+     * @method
+     * @overload
+     */
     render(){
         return html `
             ${scroll(0,0)}
@@ -36,8 +53,6 @@ export class SobreNos extends LitElement{
                 <minha-imagem titulo="logo da empresa" class="logo-empresa" url="../../imagem/logo-empresa.jpeg"></minha-imagem>
                 <meu-paragrafo class="sobreNos" texto="Estamos no mercado desde 2021 e, com varíos projetos no ar, como por exemplo o game friends"></meu-paragrafo>
             </section>
-            
-
         `;
     }
 }

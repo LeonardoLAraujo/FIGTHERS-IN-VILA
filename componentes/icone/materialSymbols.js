@@ -1,5 +1,9 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit?module';
 
+/***
+ * @class
+ * @static
+ */
 export const materialSymbolsCSS = css `
 @font-face {
     font-family: 'Material Symbols Outlined';

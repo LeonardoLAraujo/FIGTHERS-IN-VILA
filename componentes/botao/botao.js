@@ -1,7 +1,15 @@
 import {LitElement, html, css} from 'https://unpkg.com/lit-element@latest/lit-element.js?module';
 
+/***
+ * @class
+ */
 export class Botao extends LitElement{
 
+    /***
+     * @method
+     * @overload
+     * @static
+     */
     static get properties(){
         return{
             texto: {type: String},
@@ -9,10 +17,18 @@ export class Botao extends LitElement{
         }
     }
 
+    /***
+     * @constructor
+     */
     constructor(){
         super();
     }
 
+    /***
+     * @method
+     * @static
+     * @overload
+     */
     static get styles(){
         return css`
             @font-face {
@@ -43,12 +59,19 @@ export class Botao extends LitElement{
         `;
     }
 
+    /***
+     * @method
+     * @overload
+     */
     render(){
         return html `
            <button @click="${this.clicou}" class="botao" type=${this.tipoDeEnvio} texto=>${this.texto}</button>
         `;
     }
 
+    /***
+     * @method
+     */
     clicou(){
         console.log("Clicou no Botão!");
     }
