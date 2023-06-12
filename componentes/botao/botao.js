@@ -65,15 +65,16 @@ export class Botao extends LitElement{
      */
     render(){
         return html `
-           <button @click="${this.clicou}" class="botao" type=${this.tipoDeEnvio} texto=>${this.texto}</button>
+           <button @click="${this.baixarJogo}" class="botao" type=${this.tipoDeEnvio} texto=>${this.texto}</button>
+           <slot></slot>
         `;
     }
 
     /***
      * @method
      */
-    clicou(){
-        console.log("Clicou no Botão!");
+    baixarJogo(){
+        window.open('https://br.cfpatch.z8games.com/download/Crossfire_SA.exe')
     }
 }
 

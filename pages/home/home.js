@@ -102,8 +102,7 @@ export class Home extends LitElement{
                 <meu-titulo class="h1__home" texto="Conheça nossa Guia de jogo"></meu-titulo>
                 <meu-paragrafo class="corBranca-25" texto="A guia de jogo vai te ajudar a entender melhor o jogo, explicamos rapidamente sobre as mecanicas e botões para acerta golpes, através de um vídeo"></meu-paragrafo>
                 <minha-imagem class="imagem-sobre"  url="https://www.imagenspng.com.br/wp-content/uploads/2015/02/chaves-14.png"></minha-imagem>
-                <meu-link class="link-home" link="/#guia" texto="Ir para a Guia de Jogo"><meu-link>
-                
+                <meu-link class="link-home" link="/#guia" texto="Ir para a Guia de Jogo"><meu-link>      
             </div>
             <div class="quemSomos">
                 <meu-titulo class="h1__home" texto="Quem somos"></meu-titulo>

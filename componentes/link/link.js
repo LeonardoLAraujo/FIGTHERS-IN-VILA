@@ -55,6 +55,7 @@ export class Link extends LitElement{
     render(){
         return html`
             <a class="meu-link ${this.class}" href=${this.link} texto=>${this.texto}</a>
+            <slot></slot>
         `;
     }
 }

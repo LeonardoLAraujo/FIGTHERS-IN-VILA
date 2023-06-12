@@ -67,12 +67,13 @@ export class Download extends LitElement{
             .requisitos{
                 border: 7px solid #161616;
                 padding: 1rem;
-
             }
 
             .titulo-botao{
                 margin-top: 8.5rem;
-
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
             @media (max-width: 1000px){
