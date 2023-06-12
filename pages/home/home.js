@@ -31,7 +31,6 @@ export class Home extends LitElement{
                 backrground-repeat: no-repeat;
                 display: flex;
                 justify-content: center;
-               
             }
 
             .conteudo{

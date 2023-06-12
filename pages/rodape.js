@@ -4,6 +4,12 @@ import { Imagem } from '../componentes/imagem/imagem.js';
 
 export class Rodape extends LitElement{
     
+    static get properties(){
+        return{
+            class: {type: String},
+        }
+    }
+
     constructor(){
         super();
     }
@@ -20,6 +26,14 @@ export class Rodape extends LitElement{
             
         }
 
+        .rodape-contato{
+            height: 37vh;
+        }
+
+        .rodape-sobre{
+            height: 39vh;
+        }
+
         p{
             color: #fff;
             font-size: 25px;
@@ -29,7 +43,7 @@ export class Rodape extends LitElement{
 
     render(){
         return html`
-            <article>
+            <article class=${this.class}>
                 <minha-imagem class="rodape-logo" url="../imagem/logo.webp"></minha-imagem>
                 <div>
                 <p>

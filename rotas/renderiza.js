@@ -24,11 +24,11 @@ export class Renderiza{
                 break;
             case hasgDaUrl['contato']:
                 this.main.innerHTML = '<meu-contato></meu-contato>';
-                this.rodape.innerHTML = '<meu-rodape></meu-rodape>';
+                this.rodape.innerHTML = '<meu-rodape class="rodape-contato"></meu-rodape>';
                 break;
             case hasgDaUrl['sobreNos']:
                 this.main.innerHTML = '<meu-sobre></meu-sobre>';
-                this.rodape.innerHTML = '<meu-rodape></meu-rodape>';
+                this.rodape.innerHTML = '<meu-rodape class="rodape-sobre"></meu-rodape>';
                 break;
             default: 
                 this.main.innerHTML = '<home-home></home-home>';
